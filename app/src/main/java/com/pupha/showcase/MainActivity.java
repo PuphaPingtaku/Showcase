@@ -1,5 +1,6 @@
 package com.pupha.showcase;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -118,6 +119,10 @@ public class MainActivity extends AppCompatActivity
                     .replace(R.id.content_main, nextFrag, "FindPalindromeFragment")
 //                .addToBackStack(null)
                     .commit();
+
+        }   else if (id == R.id.nav_setting) {
+
+            startActivityForResult(new Intent(android.provider.Settings.ACTION_SETTINGS), 0);
 
         }
 //        else if (id == R.id.nav_share) {
