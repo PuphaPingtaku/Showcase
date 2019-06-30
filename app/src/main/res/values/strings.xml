@@ -7,10 +7,10 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
-    <string name="menu_home">Function 1</string>
-    <string name="menu_gallery">Function 2</string>
-    <string name="menu_slideshow">Function 3</string>
-    <string name="menu_tools">Function 4</string>
+    <string name="menu_home">Factorial</string>
+    <string name="menu_gallery">Text Reversal</string>
+    <string name="menu_slideshow">Alphabet Soup</string>
+    <string name="menu_tools">Palindrome Check</string>
     <string name="menu_share">Share</string>
     <string name="menu_send">Send</string>
     <string name="title_activity_bot_nav">BotNavActivity</string>

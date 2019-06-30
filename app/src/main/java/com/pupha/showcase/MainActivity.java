@@ -3,6 +3,7 @@ package com.pupha.showcase;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.Fragment;
 import android.view.View;
 import android.support.v4.view.GravityCompat;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -23,6 +24,7 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -39,9 +41,9 @@ public class MainActivity extends AppCompatActivity
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
 
-        FactorialFragment nextFrag= new FactorialFragment();
+        FactorialFragment factorialFragment= new FactorialFragment();
         getSupportFragmentManager().beginTransaction()
-                .replace(R.id.content_main, nextFrag, "findThisFragment")
+                .replace(R.id.content_main, factorialFragment, "FindFactorialFragment")
 //                .addToBackStack(null)
                 .commit();
 
@@ -64,20 +66,20 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
+//    @Override
+//    public boolean onOptionsItemSelected(MenuItem item) {
+//        // Handle action bar item clicks here. The action bar will
+//        // automatically handle clicks on the Home/Up button, so long
+//        // as you specify a parent activity in AndroidManifest.xml.
+//        int id = item.getItemId();
+//
+//        //noinspection SimplifiableIfStatement
+//        if (id == R.id.action_settings) {
+//            return true;
+//        }
+//
+//        return super.onOptionsItemSelected(item);
+//    }
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
@@ -87,11 +89,35 @@ public class MainActivity extends AppCompatActivity
 
         if (id == R.id.nav_home) {
 
+            FactorialFragment nextFrag= new FactorialFragment();
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.content_main, nextFrag, "FindFactorialFragment")
+//                .addToBackStack(null)
+                    .commit();
+
         } else if (id == R.id.nav_gallery) {
+
+            ReversalFragment nextFrag= new ReversalFragment();
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.content_main, nextFrag, "FindReversalFragment")
+//                .addToBackStack(null)
+                    .commit();
 
         } else if (id == R.id.nav_slideshow) {
 
+            SoupFragment nextFrag= new SoupFragment();
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.content_main, nextFrag, "FindSoupFragment")
+//                .addToBackStack(null)
+                    .commit();
+
         } else if (id == R.id.nav_tools) {
+
+            PalindromeFragment nextFrag= new PalindromeFragment();
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.content_main, nextFrag, "FindPalindromeFragment")
+//                .addToBackStack(null)
+                    .commit();
 
         }
 //        else if (id == R.id.nav_share) {
