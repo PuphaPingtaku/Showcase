@@ -1,5 +1,5 @@
 # Showcase
-what this application should be able to do but not yet as of writing this
+what this application should be able to do.
 
 -FirstFactorial, with recursion method
 
