@@ -8,3 +8,5 @@ what this application should be able to do.
 -sort alphabet in a string
 
 -check if string is a palindrome
+
+.apk file is in res/raw
